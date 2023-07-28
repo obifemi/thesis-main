@@ -1,0 +1,466 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.chat_header{
+  background-color: #cce6fd;
+  
+  border-radius: 10px 10px 0px 0px;
+  height: 50px;
+  padding-left: 5px;
+  width: auto;
+}
+
+.footer{
+  background-color:  #cce6fd;
+}
+.chat_comprehensive{
+  width: 1000px;
+  height: 550px;
+  
+}
+.chat_all{
+  height: 600px;
+  width: auto;
+  background-color: #edf5f9;
+  max-height: 600px;
+  overflow-y: auto;
+ 
+}
+
+.question{
+  display: none;
+  font-weight: bold;
+}
+.answer{
+  display: none;
+}
+.left{
+  text-align: left;
+  background-color: white;
+  margin-left: 10px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  display: block;
+  width: 475px;
+  word-wrap: break-word;
+  width: fit-content;
+  border-radius: 15px 15px 15px 15px;
+  padding-left: 15px;
+}
+
+.visible{
+  visibility: visible;
+}
+
+.red{
+  white-space: initial;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  width: fit-content;
+  word-wrap: break-word;
+  
+  margin-left: 42px;
+  border-radius: 15px 15px 15px 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  background-color: red;}
+
+.right{
+  /* text-align: right; */
+  background-color: #ece6e6;
+  white-space: initial;
+ position: relative;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ display: block;
+ width: fit-content;
+ word-wrap: break-word;
+ 
+ margin-left: 42px;
+ border-radius: 15px 15px 15px 15px;
+ padding-left: 10px;
+ padding-right: 10px;
+ 
+ 
+}
+.right2{
+  color: aliceblue;
+}
+
+.correct{
+  position: absolute;
+  /* text-align: center; */
+  bottom: 50%;
+  left: 25%;
+  right: 25%;  
+  color: yellow;
+}
+.correct2{
+  position: absolute;
+  /* text-align: center; */
+  bottom: 25%;
+  left: 25%;
+  right: 25%;  
+  color: orange;
+}
+
+.correct3{
+  bottom: 14%;
+}
+
+.chat_header{
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#overlay_correct {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojisiz_overlay_correct {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+#emojili_overlay_wrong {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojili_overlay_wrong2 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojili_overlay_wrong3 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojili_overlay_wrong4 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojili_overlay_wrong5 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojili_overlay_wrong6 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojili_overlay_wrong7 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojisiz_overlay_wrong {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojisiz_overlay_wrong2 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojisiz_overlay_wrong3 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojisiz_overlay_wrong4 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojisiz_overlay_wrong5 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojisiz_overlay_wrong6 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#emojisiz_overlay_wrong7 {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+a{
+  cursor: pointer;
+}
+
+.link{
+  font-weight: bolder;
+}
+
+.scroll{
+  
+  visibility:hidden;
+}
+
+hr{
+  width: 600px;
+}
+.chat_form{
+  position: absolute;
+  top: 673px;
+  background-color: #cce6fd;
+  display: flex;
+  height: 64px;
+  width: auto;
+  border: none;
+  top: 85%;
+  position: absolute;
+  width: 1000px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+
+.option{
+  display: inline-block;
+  cursor: pointer;
+}
+  
+
+.new-rect {
+  background: black;
+  width: 20%;
+  height: 30px;
+}
+.viuv{
+  width:20%;
+  height:30px;
+  background-color:blue;
+}
+
+
+
+.button_chat{
+  width: 50px;
+  border: none;
+  background-color: white;
+  height: 50px;
+  background-color: #cce6fd;
+  height: 50px;
+  margin-left: 5px;
+  margin-left: 24px;
+  margin-top: 4px;
+}
+
+.button_chat:hover{
+  cursor: pointer;
+}
+
+
+
+.input_chat{
+  width: 891px;
+  height: 50px;
+  border: none;
+  writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 2px;
+    margin-left: 5px;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+input[type=text] {
+padding-left: 5px;
+font-size: large;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
